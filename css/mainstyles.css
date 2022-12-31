@@ -1,0 +1,51 @@
+
+.userCard{
+    
+    height:fit-content;
+}
+
+.links_section{
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}  
+
+.bioText{
+    inline-size: 15rem;
+    overflow-wrap: break-word;
+    float: right;
+    text-align: center;
+}
+
+.summarySection{
+    
+    overflow-wrap: break-word;
+    background-color: white;
+    text-align: center;
+    padding: 3%;
+}
+textarea {
+    width: 500px;
+    height: 250px;
+  }
+
+
+h3{
+    font-weight: bolder;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.dot {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(48, 112, 223);
+    -moz-border-radius: 50%;
+    padding: 10px;
+    -webkit-border-radius: 50%;    
+    display: inline-block;
+  }
+
