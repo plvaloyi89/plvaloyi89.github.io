@@ -87,7 +87,8 @@ function getProjectID(){
     document.getElementById("project_title").innerHTML = details.get('name')
     document.getElementById("project_industry").innerHTML = details.get('industry')
     document.getElementById("project_link_title").innerHTML = "Link"
-    document.getElementById("project_link").innerHTML = details.get('link')
+    document.getElementById("project_link").innerHTML = details.get('name')
+    document.getElementById("project_link").href = details.get('link')
     document.getElementById("project_intro").innerHTML = details.get('description')
     document.getElementById("project_overview").innerHTML = "Overview"
     document.getElementById("project_details_overview").innerHTML = details.get('overview')
