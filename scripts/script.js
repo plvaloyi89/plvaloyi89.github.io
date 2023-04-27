@@ -37,7 +37,6 @@ function projectlist(){
        projectList.forEach((item,index) =>{
            document.getElementById("mobile").innerHTML += 
          `  
-       
         <div class="w3-third w3-container w3-margin-bottom">
           <a href="details.html?key=${item.projName}" class="btn btn-primary">
             <img src="${item.images}"  style="width:70%" class="w3-hover-opacity">
