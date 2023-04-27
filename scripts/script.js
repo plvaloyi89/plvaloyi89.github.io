@@ -35,25 +35,57 @@ function projectlist(){
 
        
        projectList.forEach((item,index) =>{
-           document.getElementById("proj").innerHTML += 
+           document.getElementById("mobile").innerHTML += 
          `  
-         <div class="col" >
-            <div class="card" style="width: 14rem;" >
-            <img src="${item.images}}" class="card-img-top" id="card_image">
-            <div class="card-body">
-            <h5 class="card-title" id="card_title">${item.projName}</h5>
-            <a href="details.html?key=${item.projName}" class="btn btn-primary">More Details</a>
-            </div>
-            </div> 
-            <br />
+       
+        <div class="w3-third w3-container w3-margin-bottom">
+          <a href="details.html?key=${item.projName}" class="btn btn-primary">
+            <img src="${item.images}"  style="width:70%" class="w3-hover-opacity">
+          </a>
+          <div class="w3-container w3-white" style="width:70%" >
+            <p><b>${item.projName}</b></p>
+          </div>
         </div>
           `
        })
       
-    })
+    })   
+}
 
-     
-      
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
 }
 
 function getProjectID(){
